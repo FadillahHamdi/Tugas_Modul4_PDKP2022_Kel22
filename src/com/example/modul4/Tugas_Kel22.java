@@ -58,3 +58,43 @@ public class Tugas_Kel22 {
             }
         }
 
+        public static void main(String[] args) {
+            Scanner input = new Scanner(System.in);
+            int pilih;
+
+            menu();
+            while (true) {
+                System.out.print("Masukkan paket yang ingin Anda beli: ");
+                System.out.println(" ");
+                Scanner scan = new Scanner(System.in);
+                pilih = Integer.parseInt(input.next());
+
+                switch (pilih) {
+                    case 1:
+                        System.out.println("Anda akan membeli Paket 35 GB / 1 bulan dengan harga Rp 85.000?");
+                        System.out.println("1. Beli");
+                        System.out.println("0. Kembali");
+                        System.out.println(" ");
+                        int i1 = scan.nextInt();
+                        if (i1 == 1) {
+                            if (pulsa >= harga1) {
+                                System.out.println("Selamat! Paket 35 GB / 1 bulan Anda telah aktif.");
+                                pulsa -= harga1;
+                                System.out.println("Sisa pulsa Anda Rp" + pulsa);
+                                System.out.println(" ");
+                                ulang();
+                            }
+                            else {
+                                System.out.println("Mohon maaf pulsa Anda tidak mencukupi. Silakan pilih paket lainnya. \n");
+                                menu();
+                            }
+                        }
+                        else if (i1 == 0) {
+                            menu();
+                        }
+                        else {
+                            System.out.println("Mohon maaf pilihan Anda tidak tersedia.");
+                            System.exit(0);
+                        }
+                        break;
+
