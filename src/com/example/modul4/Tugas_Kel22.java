@@ -97,4 +97,57 @@ public class Tugas_Kel22 {
                             System.exit(0);
                         }
                         break;
-
+                    case 2:
+                        System.out.println("Anda akan membeli Paket 15 GB / 1 bulan dengan harga Rp 65.000?");
+                        System.out.println("1. Beli");
+                        System.out.println("0. Kembali");
+                        System.out.println(" ");
+                        int i2 = scan.nextInt();
+                        if (i2 == 1) {
+                            if (pulsa >= harga2) {
+                                System.out.println("Selamat! Paket 15 GB / 1 bulan Anda telah aktif.");
+                                pulsa -= harga2;
+                                System.out.println("Sisa pulsa Anda Rp" + pulsa);
+                                System.out.println(" ");
+                                ulang();
+                            }
+                            else {
+                                System.out.println("Mohon maaf pulsa Anda tidak mencukupi. Silakan pilih paket lainnya. \n");
+                                menu();
+                            }
+                        }
+                        else if (i2 == 0) {
+                            menu();
+                        }
+                        else {
+                            System.out.println("Mohon maaf pilihan Anda tidak tersedia.");
+                            System.exit(0);
+                        }
+                        break;
+                    case 3:
+                        System.out.println("Anda akan membeli Paket 5 GB / 1 bulan dengan harga Rp40.000?");
+                        System.out.println("1. Beli");
+                        System.out.println("0. Kembali");
+                        System.out.println(" ");
+                        int i3 = scan.nextInt();
+                        if (i3 == 1) {
+                            if (pulsa >= harga3) {
+                                System.out.println("Selamat! Paket 5 GB / 1 bulan Anda telah aktif.");
+                                pulsa -= harga3;
+                                System.out.println("Sisa pulsa Anda Rp" + pulsa);
+                                System.out.println(" ");
+                                ulang();
+                            }
+                            else {
+                                System.out.println("Mohon maaf pulsa Anda tidak mencukupi. Silakan pilih paket lainnya. \n");
+                                menu();
+                            }
+                        }
+                        else if (i3 == 0) {
+                            menu();
+                        }
+                        else {
+                            System.out.println("Mohon maaf pilihan Anda tidak tersedia.");
+                            System.exit(0);
+                        }
+                        break;
