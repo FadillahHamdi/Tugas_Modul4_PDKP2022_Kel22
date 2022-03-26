@@ -151,3 +151,45 @@ public class Tugas_Kel22 {
                             System.exit(0);
                         }
                         break;
+                        
+                    case 4:
+                        System.out.println("Anda akan membeli Paket 3 GB / 1 bulan dengan harga Rp30.000?");
+                        System.out.println("1. Beli");
+                        System.out.println("0. Kembali");
+                        System.out.println(" ");
+                        int i4 = scan.nextInt();
+                        if (i4 == 1) {
+                            if (pulsa >= harga4) {
+                                System.out.println("Selamat! Paket 3 GB / 1 bulan Anda telah aktif.");
+                                pulsa -= harga4;
+                                System.out.println("Sisa pulsa Anda Rp" + pulsa);
+                                System.out.println(" ");
+                                ulang();
+                            }
+                            else {
+                                System.out.println("Mohon maaf pulsa Anda tidak mencukupi. Silakan pilih paket lainnya. \n");
+                                menu();
+                            }
+                        }
+                        else if (i4 == 0) {
+                            menu();
+                        }
+                        else {
+                            System.out.println("Mohon maaf pilihan Anda tidak tersedia.");
+                            System.exit(0);
+                        }
+                        break;
+                    case 5:
+                        System.out.println("Terima kasih.");
+                        System.exit(0);
+                        break;
+                    default:
+                        System.out.println("Mohon maaf pilihan tidak tersedia. Silakan pilih pilihan yang tersedia.\n");
+                        menu();
+                        break;
+                }
+            }
+        }
+    }
+
+
