@@ -18,7 +18,10 @@ public class Tugas_Kel22 {
         public static int harga2 = 65000;
         public static int harga3 = 40000;
         public static int harga4 = 30000;
-
+    
+    static String cetak1(String text){
+        return text;
+    }
         public static void menu() {
             System.out.println("################################################");
             System.out.println("Sisa pulsa Anda Rp " + pulsa);
@@ -59,6 +62,8 @@ public class Tugas_Kel22 {
         }
 
         public static void main(String[] args) {
+            System.out.println(cetak1("Selamat Datang di Bulan"));
+            
             Scanner input = new Scanner(System.in);
             int pilih;
 
